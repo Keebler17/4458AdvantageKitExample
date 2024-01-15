@@ -15,7 +15,7 @@ public class Constants {
     public static final double kMass = 60.0;
     public static final double kWheelRadius = Units.inchesToMeters(3);
 
-    public static final double distancePerPulse = ((1/360) / 10.71) * (kWheelRadius * Math.PI);
+    public static final double distancePerPulse = ((1.0/360.0) / 10.71) * (kWheelRadius * Math.PI);
 
     public static final int LEFT_MOTOR = 0;
     public static final int RIGHT_MOTOR = 1;
@@ -26,5 +26,5 @@ public class Constants {
     public static final int RIGHT_ENCODER_0 = 4;
     public static final int RIGHT_ENCODER_1 = 5;
 
-    public static final int GYRO = 6;
+    public static final int GYRO = 0;
 }

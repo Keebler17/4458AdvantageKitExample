@@ -27,12 +27,16 @@ public class DriveIOPWMSparkMax implements DriveIO {
     public DriveIOPWMSparkMax() {
         l = new PWMSparkMax(Constants.LEFT_MOTOR);
         r = new PWMSparkMax(Constants.RIGHT_MOTOR);
+
+        r.setInverted(true);
         
         encoderL = new Encoder(Constants.LEFT_ENCODER_0, Constants.LEFT_ENCODER_1);
         encoderR = new Encoder(Constants.RIGHT_ENCODER_0, Constants.RIGHT_ENCODER_1);
 
         encoderL.setDistancePerPulse(Constants.distancePerPulse);
         encoderR.setDistancePerPulse(Constants.distancePerPulse);
+
+        encoderR.setReverseDirection(true);
 
         drive = new DifferentialDrive(l, r);
 
